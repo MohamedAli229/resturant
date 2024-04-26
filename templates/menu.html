@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+
+
+
+
+
+
+<!-- ***** Menu Area Starts ***** -->
+<section class="section" id="offers">
+    <div class="container">
+        
+        
+<div class="row row-cols-1 row-cols-md-4 g-4">
+
+    {%for m in menu%}
+    <div class="col">
+        <div class="card">
+            <img class="card" style="max-height: 300px;max-width: 400px;" src="{{m.image.url}}" alt=" fod ">
+            <div  class="card-body">
+                <h6 class="card-title">{{m.name}}</h6>
+                <p style="text-align: center;" class="card-text"><span style="color: red;">
+                    <a rel="nofollow" href="https://wa.me/201067331087">01067331087</a></span>
+                    <br><a class="btn btn-primary btn-sm color-red"  href="{% url 'book' %}">Reverse A Table</a>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted"><span style="color: red;">{{m.price}} LE</span></small>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+
+
+
+</div>
+
+
+    </div>
+</section>
+
+{%endblock content%}
