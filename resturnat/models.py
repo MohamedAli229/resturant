@@ -4,7 +4,7 @@ from django.db import models
 class Food(models.Model):
     name=models.CharField( max_length=200)
     price=models.CharField(max_length=6)
-    image=models.ImageField(upload_to='food')
+    image=models.ImageField(upload_to='food',null=True,blank=True)
     description=models.TextField(blank=True)
 
     def __str__(self):
